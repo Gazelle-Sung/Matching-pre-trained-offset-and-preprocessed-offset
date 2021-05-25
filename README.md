@@ -5,7 +5,7 @@ This is a project to match the offset of the pre-trained word embeddings such as
 1. Stanza: https://stanfordnlp.github.io/stanza/#getting-started
 2. Spacy: https://spacy.io/usage
 
-References:
+# References:
 - Stanza: Qi, P., Zhang, Y., Zhang, Y., Bolton, J., & Manning, C. D. (2020). Stanza: A Python natural language processing toolkit for many human languages. arXiv preprint arXiv:2003.07082.
 - Spacy: Matthew Honnibal and Ines Montani. 2017. spaCy 2: Natural language understanding with Bloom embeddings, convolutional neural networks and incremental parsing. To appear (2017).
 - BERT: Devlin, J., Chang, M. W., Lee, K., & Toutanova, K. (2018). Bert: Pre-training of deep bidirectional transformers for language understanding. arXiv preprint arXiv:1810.04805.
