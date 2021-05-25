@@ -17,7 +17,7 @@ def write_pkl(_dict, _write_file_name):
         pickle.dump(_dict, f, protocol=pickle.HIGHEST_PROTOCOL)
 
 def main(args):
-    glove_name = 'glove.'+args.selected_glove+'.300d'
+    glove_name = './glove.'+args.selected_glove+'.300d'
 
     # Read Glove Word embedding line by line
     file = open(glove_name+'.txt', 'r', encoding="utf-8")
