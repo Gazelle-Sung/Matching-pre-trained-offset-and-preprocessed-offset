@@ -47,14 +47,14 @@ def sel_pretrained(_input="bert"):
     # 3. Glove
     elif _input.lower() == "glove42b":
         print("****** Selected pretrained word embeddings: {}".format(_input))
-        glove_PATH = "./glove/glove.42B.300d.pkl"
+        glove_PATH = "./glove.42B.300d.pkl"
         with open(glove_PATH, "rb") as file:
             glove = pickle.load(file)
         return None, glove
 
     elif _input.lower() == "glove840b":
         print("****** Selected pretrained word embeddings: {}".format(_input))
-        glove_PATH = "./glove/glove.840B.300d.pkl"
+        glove_PATH = "./glove.840B.300d.pkl"
         with open(glove_PATH, "rb") as file:
             glove = pickle.load(file)
         return None, glove
