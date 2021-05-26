@@ -6,7 +6,14 @@
 1. Installing Stanza: https://stanfordnlp.github.io/stanza/#getting-started
 2. Installing Spacy: https://spacy.io/usage
 
-## Glove pre-trained word embeddings
+## Word embeddings
+### BERT
+1. Installing BERT: https://huggingface.co/transformers/installation.html
+
+### ELMo
+1. Installing ELMo: https://github.com/allenai/allennlp
+
+### Glove
 1. Downlaod the pretrained glove word embeddings: https://nlp.stanford.edu/projects/glove/
 2. Convert the pretrained glove word embeddings(txt) to pickle file format using Glove_txt2pkl.py
 
