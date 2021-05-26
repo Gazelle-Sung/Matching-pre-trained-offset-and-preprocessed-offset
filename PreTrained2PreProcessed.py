@@ -7,7 +7,6 @@ import argparse
 
 class Clause_feature:
     def __init__(self, tk_idx, tk, offset, pos, ner, dep, bert_offset):
-        #self.c_idx = c_idx
         self.tk_idx = tk_idx
         self.tk = tk
         self.offset = offset
