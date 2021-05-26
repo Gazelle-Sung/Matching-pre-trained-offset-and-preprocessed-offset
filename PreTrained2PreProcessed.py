@@ -169,12 +169,10 @@ def embedding2preprocessed(datasample, nlp, _pipeline, embedder, model, emb="ber
                  'preprocessed_dep': [x.dep for x in preprocessed_result]}
 
 def main(args):
-    sample_text = """Officials are set to announce details of B.C.'s latest restart plan on Tuesday as daily case counts continue to trend downward and hours after the last round of "circuit breaker" restrictions expired."""
-
     nlp = sel_preprocessing(args.pipeline)
     model, embedder = sel_pretrained(args.emb)
 
-    preprocessed_bert_input_result = embedding2preprocessed(sample_text, nlp, args.pipeline, embedder, model, args.emb)
+    preprocessed_bert_input_result = embedding2preprocessed(args.sample_text, nlp, args.pipeline, embedder, model, args.emb)
     print(preprocessed_bert_input_result['emb'])
     print(preprocessed_bert_input_result['preprocessed_offset_match'])
     print(preprocessed_bert_input_result['preprocessed_dep'])
@@ -182,6 +180,9 @@ def main(args):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
+    
+    sample_text = """Officials are set to announce details of B.C.'s latest restart plan on Tuesday as daily case counts continue to trend downward and hours after the last round of "circuit breaker" restrictions expired."""
+    parser.add_argument("--text", default=sample_text, type=str, help="Input text.")
 
     parser.add_argument("--pipeline", default="spacy", type=str, help="Preprocessing method such as Stanza or Spacy.")
     parser.add_argument("--emb", default="bert", type=str, help="Pre-trained word embedding such as BERT, ELMo or Glove.")
