@@ -15,7 +15,7 @@
 
 ### Glove
 1. Downlaod the pretrained glove word embeddings: https://nlp.stanford.edu/projects/glove/
-2. Convert the pretrained glove word embeddings(txt) to pickle file format using Glove_txt2pkl.py
+2. Convert the pretrained glove word embeddings text file format to pickle file format using Glove_txt2pkl.py
 
 # References:
 - Stanza: Qi, P., Zhang, Y., Zhang, Y., Bolton, J., & Manning, C. D. (2020). Stanza: A Python natural language processing toolkit for many human languages. arXiv preprint arXiv:2003.07082.
