@@ -6,7 +6,7 @@
 # Brief description
 1. PreTrained2PreProcessed_fronzen.py
  - This is a version where the output is frozen pre-trained word embedding of BERT, ELMo and Glove.
- >> Output format
+>> Output format
   - emb(tensor): Frozen word embedding of BERT, ELMo and Glove
   - preprocessed_offset_match(list): List of pre-trained word embedding offset of matching with the preprocessed offset
   - preprocessed_dep(list): List of dependency parsing result which is part of the preprocessed result
