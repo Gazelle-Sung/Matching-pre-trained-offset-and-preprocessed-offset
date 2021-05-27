@@ -27,19 +27,19 @@
  
 # Prerequisites
 > Preprocessing techinques
->> 1. Installing Stanza: https://stanfordnlp.github.io/stanza/#getting-started
->> 2. Installing Spacy: https://spacy.io/usage
+> - Installing Stanza: https://stanfordnlp.github.io/stanza/#getting-started
+> - Installing Spacy: https://spacy.io/usage
 
 > Word embeddings
 >> BERT
->> 1. Installing BERT: https://huggingface.co/transformers/installation.html
+>> - Installing BERT: https://huggingface.co/transformers/installation.html
 
 >> ELMo
->> 1. Installing ELMo: https://github.com/allenai/allennlp
+>> - Installing ELMo: https://github.com/allenai/allennlp
 
 >> Glove
->> 1. Downlaod the pretrained glove word embeddings: https://nlp.stanford.edu/projects/glove/
->> 2. Convert the pretrained glove word embeddings text file format to pickle file format by running "Glove_txt2pkl.py"
+>> - Downlaod the pretrained glove word embeddings: https://nlp.stanford.edu/projects/glove/
+>> - Convert the pretrained glove word embeddings text file format to pickle file format by running "Glove_txt2pkl.py"
 
 
 # References:
