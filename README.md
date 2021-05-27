@@ -26,6 +26,15 @@
  
  
 # Prerequisites
+> Packages:
+> - pickle
+> - torch
+> - os
+> - numpy
+> - argparse
+> - transformers
+> - allennlp
+
 > Preprocessing techinques
 > - Installing Stanza: https://stanfordnlp.github.io/stanza/#getting-started
 > - Installing Spacy: https://spacy.io/usage
