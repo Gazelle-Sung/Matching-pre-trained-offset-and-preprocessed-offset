@@ -14,15 +14,16 @@
 2. PreTrained2PreProcessed_unfronzen.py
 > This is a version where the output is input of BERT model such as input_ids, attention_mask, token_type_ids, and word embedding of ELMo and Glove.
 >> BERT output format
->>> input_ids(tensor): Input of BERT model
->>> attention_mask(tensor): Input of BERT model
->>> token_type_ids(tensor): Input of BERT model
->>> preprocessed_offset_match(list): List of pre-trained word embedding offset of matching with the preprocessed offset
->>> preprocessed_dep(list): List of dependency parsing result which is part of the preprocessed result
+>>> - input_ids(tensor): Input of BERT model
+>>> - attention_mask(tensor): Input of BERT model
+>>> - token_type_ids(tensor): Input of BERT model
+>>> - preprocessed_offset_match(list): List of pre-trained word embedding offset of matching with the preprocessed offset
+>>> - preprocessed_dep(list): List of dependency parsing result which is part of the preprocessed result
+
 >> ELMo, Glove output format
->>> emb(tensor): Frozen word embedding of ELMo and Glove
->>> preprocessed_offset_match(list): List of pre-trained word embedding offset of matching with the preprocessed offset
->>> preprocessed_dep(list): List of dependency parsing result which is part of the preprocessed result
+>>> - emb(tensor): Frozen word embedding of ELMo and Glove
+>>> - preprocessed_offset_match(list): List of pre-trained word embedding offset of matching with the preprocessed offset
+>>> - preprocessed_dep(list): List of dependency parsing result which is part of the preprocessed result
  
  - - - -
  
