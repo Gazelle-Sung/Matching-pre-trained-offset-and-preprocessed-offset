@@ -1,10 +1,8 @@
 # Purpose: Matching pre-trained word embedding offset to preprocessed token offset
 - This is a project to match the offset of the pre-trained word embeddings such as BERT, ELMo, and Glove to the preprocessed token offset and its dependencies in various ways of preprocessing method such as Stanza and Spacy. This is because BERT uses its own tokenization technique which breaks the word into several subtokens which differ from word-level tokenization. Therefore, by matching the offset of pre-trained results and the preprocessed offset, the result of this can be applied to the graph neural networks without concern of its mismatch of the preprocessed token offset and pre-trained result offset.
-
+- - - -
 # Brief description
 1. PreTrained2PreProcessed_fronzen.py
-2. \begin{item}
-3. \end{item}
  - This is a version where the output is frozen pre-trained word embedding of BERT, ELMo and Glove.
  - Output format
   - emb(tensor): Frozen word embedding of BERT, ELMo and Glove
