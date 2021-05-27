@@ -3,6 +3,8 @@
 
 # Brief description
 1. PreTrained2PreProcessed_fronzen.py
+2. \begin{item}
+3. \end{item}
  - This is a version where the output is frozen pre-trained word embedding of BERT, ELMo and Glove.
  - Output format
   - emb(tensor): Frozen word embedding of BERT, ELMo and Glove
