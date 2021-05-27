@@ -58,6 +58,7 @@ def sel_pretrained(_input="bert"):
             glove = pickle.load(file)
         return None, glove
 
+# *** Tokenize with selected method and store with token-level id, text, offset, pos tag, ner and dependency triple
 def tokenization_processing(_datasample, nlp, _pipeline='stanza'):
     cur_clause_feature = []
     # Spacy
@@ -103,7 +104,6 @@ def tokenization_processing(_datasample, nlp, _pipeline='stanza'):
 
                 cur_clause_feature.append(Clause_feature(cur_id, cur_tk, (cur_tk_start_offset, cur_tk_end_offset), cur_pos, cur_ner, cur_dep_triple, ''))
     return cur_clause_feature
-
 
 def embedding2preprocessed(args, datasample, nlp, embedder, model):
     # preprocessed result
