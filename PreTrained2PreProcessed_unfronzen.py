@@ -112,11 +112,6 @@ def embedding2preprocessed(args, datasample, nlp, embedder, model):
     if args.emb == "bert":
         # bert tokenized result
         tokenized_result = embedder(datasample, return_offsets_mapping=True, return_tensors='pt')
-        bert_embedding = model(input_ids=tokenized_result['input_ids'],
-                              attention_mask=tokenized_result['attention_mask'],
-                              token_type_ids=tokenized_result['token_type_ids'])[0]
-
-        bert_embedding = torch.squeeze(bert_embedding, 0)
 
         for p_idx, p_result in enumerate(preprocessed_result):
             p_offset = p_result.offset
@@ -137,7 +132,9 @@ def embedding2preprocessed(args, datasample, nlp, embedder, model):
 
             p_result.bert_offset = cur_offset_list
 
-        return {'emb':bert_embedding,
+        return {'input_ids':tokenized_result['input_ids'],
+                 'attention_mask':tokenized_result['attention_mask'],
+                 'token_type_ids':tokenized_result['token_type_ids'],
                  'preprocessed_offset_match':[x.bert_offset for x in preprocessed_result],
                  'preprocessed_dep': [x.dep for x in preprocessed_result]}
 
@@ -173,9 +170,16 @@ def main(args):
 
     result = embedding2preprocessed(args, sample_text, nlp, embedder, model)
 
-    print(result['emb'])
-    print(result['preprocessed_offset_match'])
-    print(result['preprocessed_dep'])
+    if args.emb == "bert":
+        print(result['input_ids'])
+        print(result['attention_mask'])
+        print(result['token_type_ids'])
+        print(result['preprocessed_offset_match'])
+        print(result['preprocessed_dep'])
+    else:
+        print(result['emb'])
+        print(result['preprocessed_offset_match'])
+        print(result['preprocessed_dep'])
 
 
 if __name__ == "__main__":
