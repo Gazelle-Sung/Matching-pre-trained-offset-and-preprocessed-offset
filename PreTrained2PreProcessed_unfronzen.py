@@ -185,7 +185,7 @@ def main(args):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
 
-    parser.add_argument("--pipeline", default="spacy", type=str, help="Preprocessing method such as Stanza or Spacy.")
+    parser.add_argument("--pipeline", default="spacy", type=str, help="Preprocessing methods such as Stanza or Spacy.")
     parser.add_argument("--emb", default="bert", type=str, help="Pre-trained word embedding such as BERT, ELMo or Glove.")
 
     args = parser.parse_args()
