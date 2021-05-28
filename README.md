@@ -6,23 +6,23 @@
 1. PreTrained2PreProcessed_fronzen.py
 > This is a version where the output is frozen pre-trained word embedding of BERT, ELMo and Glove.
 >> Output format
->> - emb(tensor): Frozen word embedding of BERT, ELMo and Glove
->> - preprocessed_offset_match(list): List of pre-trained word embedding offset of matching with the preprocessed offset
->> - preprocessed_dep(list): List of dependency parsing result which is part of the preprocessed result
+>> - emb(tensor): The frozen word embedding of BERT, ELMo, and Glove.
+>> - preprocessed_offset_match(list): The list of pre-trained word embedding offsets of matching with the preprocessed offsets.
+>> - preprocessed_dep(list): The list of dependency parsing result which is part of the preprocessed result.
 
 2. PreTrained2PreProcessed_unfronzen.py
 > This is a version where the output is input of BERT model such as input_ids, attention_mask, token_type_ids, and word embedding of ELMo and Glove.
 >> BERT output format
->> - input_ids(tensor): Input of BERT model
->> - attention_mask(tensor): Input of BERT model
->> - token_type_ids(tensor): Input of BERT model
->> - preprocessed_offset_match(list): List of pre-trained word embedding offset of matching with the preprocessed offset
->> - preprocessed_dep(list): List of dependency parsing result which is part of the preprocessed result
+>> - input_ids(tensor): The input of the BERT model.
+>> - attention_mask(tensor): The input of the BERT model.
+>> - token_type_ids(tensor): The input of the BERT model.
+>> - preprocessed_offset_match(list): The list of pre-trained word embedding offsets of matching with the preprocessed offsets.
+>> - preprocessed_dep(list): The list of dependency parsing result which is part of the preprocessed result.
 
 >> ELMo, Glove output format
->> - emb(tensor): Frozen word embedding of ELMo and Glove
->> - preprocessed_offset_match(list): List of pre-trained word embedding offset of matching with the preprocessed offset
->> - preprocessed_dep(list): List of dependency parsing result which is part of the preprocessed result
+>> - emb(tensor): The frozen word embedding of BERT, ELMo, and Glove.
+>> - preprocessed_offset_match(list): The list of pre-trained word embedding offsets of matching with the preprocessed offsets.
+>> - preprocessed_dep(list): The list of dependency parsing result which is part of the preprocessed result.
  
  
 # Prerequisites
@@ -50,6 +50,9 @@
 >> - Downlaod the pretrained glove word embeddings: https://nlp.stanford.edu/projects/glove/
 >> - Convert the pretrained glove word embeddings text file format to pickle file format by running "Glove_txt2pkl.py"
 
+# Parameters:
+> - pipeline(str, defaults to "spacy"): Preprocessing methods such as Stanza or Spacy.
+> - emb(str, defaults to "bert"): Pre-trained word embedding such as BERT, ELMo or Glove.
 
 # References:
 - Stanza: Qi, P., Zhang, Y., Zhang, Y., Bolton, J., & Manning, C. D. (2020). Stanza: A Python natural language processing toolkit for many human languages. arXiv preprint arXiv:2003.07082.
