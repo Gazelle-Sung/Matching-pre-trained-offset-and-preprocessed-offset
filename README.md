@@ -4,7 +4,7 @@
 
 # Brief description
 >PreTrained2PreProcessed.py
-> - The output of this file is the either input of BERT model such as input_ids, attention_mask, token_type_ids or frozen word embeddings of BERT, ELMo and Glove.
+> - The output of this file is either input of BERT model such as input_ids, attention_mask, token_type_ids, or frozen word embeddings of BERT, ELMo, and Glove.
 >> - input_ids(tensor): The input of the BERT model.
 >> - attention_mask(tensor): The input of the BERT model.
 >> - token_type_ids(tensor): The input of the BERT model.
