@@ -13,7 +13,7 @@
 >> - preprocessed_dep(list): The list of dependency parsing result which is part of the preprocessed result.
 
 >> Frozen type of BERT, ELMo, Glove output format
->> - emb(tensor): The frozen word embedding of BERT, ELMo, and Glove.
+>> - emb(tensor): The frozen word embedding of BERT, ELMo, and Glove where ($N$ x $d$)
 >> - preprocessed_offset_match(list): The list of pre-trained word embedding offsets of matching with the preprocessed offsets.
 >> - preprocessed_dep(list): The list of dependency parsing result which is part of the preprocessed result.
  
