@@ -5,6 +5,7 @@
 # Brief description
 >PreTrained2PreProcessed.py
 > - The output of this file is either input of BERT model such as input_ids, attention_mask, token_type_ids, or frozen word embeddings of BERT, ELMo, and Glove.
+>> If the output
 >> - input_ids(tensor): The input of the BERT model.
 >> - attention_mask(tensor): The input of the BERT model.
 >> - token_type_ids(tensor): The input of the BERT model.
@@ -45,7 +46,8 @@
 # Parameters:
 > - pipeline(str, defaults to "spacy"): Preprocessing methods such as Stanza or Spacy.
 > - emb(str, defaults to "bert"): Pre-trained word embedding such as BERT, ELMo or Glove.
-
+> - output_type(str, defaults to "frozen"): This only affects the result of BERT embeddings so it gives the input format of the BERT model with input_ids, attention_mask, token_type_ids when the output_type is set to "unfrozen" while it gives frozen word embeddings when the output_type is set to default which is "frozen".
+> 
 # References:
 - Stanza: Qi, P., Zhang, Y., Zhang, Y., Bolton, J., & Manning, C. D. (2020). Stanza: A Python natural language processing toolkit for many human languages. arXiv preprint arXiv:2003.07082.
 - Spacy: Matthew Honnibal and Ines Montani. 2017. spaCy 2: Natural language understanding with Bloom embeddings, convolutional neural networks and incremental parsing. To appear (2017).
