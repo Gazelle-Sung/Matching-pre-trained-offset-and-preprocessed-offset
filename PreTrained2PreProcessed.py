@@ -5,17 +5,6 @@ import numpy as np
 
 from text_processing import preprocessing
 
-class Clause_feature:
-    def __init__(self, tk_idx, tk, offset, pos, ner, dep, bert_offset):
-        self.tk_idx = tk_idx
-        self.tk = tk
-        self.offset = offset
-        self.pos = pos
-        self.ner = ner
-        self.dep = dep
-        self.bert_offset = bert_offset
-
-
 
 # *** Select a pre-trained Word Embeddings
 def sel_pretrained(_input="bert"):
