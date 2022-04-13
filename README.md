@@ -3,12 +3,15 @@
 
 
 # Brief description
->PreTrained2PreProcessed.py
-> - The output of this file is either input of BERT model such as input_ids, attention_mask, token_type_ids, or frozen word embeddings of BERT, ELMo, and Glove.
->> Output
->> - emb (tensor): Token representation of given text.
->> - preprocessed_offset_match (list): Pre-trained word embedding offsets of matching with the preprocessed offsets.
->> - preprocessed_dep (list): Dependency parsing result which is part of the preprocessed result.
+- OffsetMatching2Preprocessed.py
+> Output format
+> - emb (tensor): Token representation of given text.
+> - preprocessed_offset_match (list): Pre-trained word embedding offsets of matching with the preprocessed offsets.
+> - preprocessed_dep (list): Dependency parsing result which is part of the preprocessed result.
+
+- text_processing.py
+> Output format
+> - cur_clause_feature (list): Sturcture of token id, token offsets, token, dependency, pos, ner.
  
  
 # Prerequisites
