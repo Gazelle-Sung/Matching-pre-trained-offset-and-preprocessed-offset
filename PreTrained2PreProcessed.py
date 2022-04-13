@@ -48,7 +48,7 @@ def sel_pretrained(_input="bert"):
         return None, glove
 
 
-def embedding2preprocessed(args, datasample, nlp, embedder, model):
+def embedding2preprocessed(args, datasample, embedder, model):
     # preprocessed result
     preprocessed_result = preprocessing(datasample, args.pipeline)
 
