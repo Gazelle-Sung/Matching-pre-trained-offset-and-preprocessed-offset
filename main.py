@@ -4,11 +4,9 @@ import PreTrained2PreProcessed as pt2pp
 
 def main(args):
     sample_text = """Officials are set to announce details of B.C.'s latest restart plan on Tuesday as daily case counts continue to trend downward and hours after the last round of "circuit breaker" restrictions expired."""
-
-    nlp = pt2pp.sel_preprocessing(args.pipeline)
     model, embedder = pt2pp.sel_pretrained(args.emb)
 
-    result = pt2pp.embedding2preprocessed(args, sample_text, nlp, embedder, model)
+    result = pt2pp.embedding2preprocessed(args, sample_text, embedder, model)
 
     if args.emb == "bert" and args.output_type != "frozen":
         print(result['input_ids'])
