@@ -1,6 +1,16 @@
 import stanza
 import spacy
 
+class Clause_feature:
+    def __init__(self, tk_idx, tk, offset, pos, ner, dep, bert_offset):
+        self.tk_idx = tk_idx
+        self.tk = tk
+        self.offset = offset
+        self.pos = pos
+        self.ner = ner
+        self.dep = dep
+        self.bert_offset = bert_offset
+        
 # *** Tokenize with selected method and store with token-level id, text, offset, pos tag, ner and dependency triple
 def preprocessing(_datasample, _pipeline='stanza'):
     cur_clause_feature = []
