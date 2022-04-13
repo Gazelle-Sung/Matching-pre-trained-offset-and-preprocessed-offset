@@ -23,6 +23,8 @@
 > - argparse
 > - transformers
 > - allennlp
+> - stanza
+> - spacy
 
 > Preprocessing techinques
 > - Installing Stanza: https://stanfordnlp.github.io/stanza/#getting-started
