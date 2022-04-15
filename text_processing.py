@@ -59,4 +59,5 @@ def preprocessing(_datasample, _pipeline='stanza'):
                 cur_dep_triple = (cur_id, cur_dep, cur_head)
 
                 cur_clause_feature.append(Clause_feature(cur_id, cur_tk, (cur_tk_start_offset, cur_tk_end_offset), cur_pos, cur_ner, cur_dep_triple, ''))
+                
     return cur_clause_feature
