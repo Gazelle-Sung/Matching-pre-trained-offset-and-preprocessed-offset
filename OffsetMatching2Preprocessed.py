@@ -7,31 +7,37 @@ from text_processing import preprocessing
 
 
 # *** Select a pre-trained Word Embeddings
-def sel_pretrained(_input="bert"):
+def sel_pretrained(_lm="bert", _pm="bert-base-uncased"):
     # 1. BERT
-    if _input.lower() == "bert":
-        print("****** Selected pretrained word embeddings: {}".format(_input))
-        from transformers import BertConfig, BertModel, BertTokenizerFast, BertForSequenceClassification, AdamW, BertPreTrainedModel
-        PRETRAINED_BERT = "bert-base-uncased"
-        return BertModel.from_pretrained(PRETRAINED_BERT), BertTokenizerFast.from_pretrained(PRETRAINED_BERT)
+    if _lm.lower() == "bert":
+        print("****** Selected pretrained word embeddings: {}".format(_lm))
+        from transformers import BertModel, BertTokenizerFast
+        PRETRAINED_MODEL = _pm
+        return BertModel.from_pretrained(PRETRAINED_MODEL), BertTokenizerFast.from_pretrained(PRETRAINED_MODEL)
+    
+    # 2. RoBERTa
+    elif _lm.lower() == "roberta":
+        print("****** Selected pretrained word embeddings: {}".format(_lm))
+        from transformers import RoBertaModel, RobertaTokenizerFast
+        PRETRAINED_MODEL = _pm
+        return RoBertaModel.from_pretrained(PRETRAINED_MODEL), RobertaTokenizerFast.from_pretrained(PRETRAINED_MODEL)
+    
 
-    # 2. Elmo
-    elif _input.lower() == "elmo":
-        print("****** Selected pretrained word embeddings: {}".format(_input))
+    # 3. Elmo
+    elif _lm.lower() == "elmo":
+        print("****** Selected pretrained word embeddings: {}".format(_lm))
         from allennlp.commands.elmo import ElmoEmbedder
         return None, ElmoEmbedder(cuda_device=0)
 
-    # 3. Glove
-    elif _input.lower() == "glove42b":
-        print("****** Selected pretrained word embeddings: {}".format(_input))
-        glove_PATH = "./glove/glove.42B.300d.pkl"
-        with open(glove_PATH, "rb") as file:
-            glove = pickle.load(file)
-        return None, glove
-
-    elif _input.lower() == "glove840b":
-        print("****** Selected pretrained word embeddings: {}".format(_input))
-        glove_PATH = "./glove/glove.840B.300d.pkl"
+    # 4. Glove
+    elif _lm.lower() == "glove":
+        print("****** Selected pretrained word embeddings: {}".format(_lm))
+        
+        if _pm.lower() == "42b":
+            glove_PATH = "./glove/glove.42B.300d.pkl"
+        elif _lm.lower() == "glove840b":
+            glove_PATH = "./glove/glove.840B.300d.pkl"
+            
         with open(glove_PATH, "rb") as file:
             glove = pickle.load(file)
         return None, glove
